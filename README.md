@@ -1,4 +1,4 @@
-#Translate & Dictionary API Project With Javascript ES6
+# Translate & Dictionary API Project With Javascript ES6
 
 ## Hello Everyone
 It was a project that I loved. I developed using Javascript ES6 structure and OOP (API requests received with async and await). Both translate and dictionary API requests work together. If the language to be translated is English and a single word is written, the dictionary API works.
@@ -14,7 +14,10 @@ I developed the interface using Bootstrap V5.2
 * Bootstrap alert operation that gives a warning and disappears with the SetInterval() function
 
 
-[![Watch the video](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/main.PNG)](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/video.mp4)
+
+
+
+https://user-images.githubusercontent.com/58048971/186948293-1f530270-b93d-47d2-88e3-6b2fcd615269.mp4
 
 
 
