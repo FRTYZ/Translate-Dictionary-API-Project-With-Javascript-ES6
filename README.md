@@ -1,7 +1,7 @@
 #Translate & Dictionary API Project With Javascript ES6
 
 ## Hello Everyone
-It was a project that I loved. I developed using Javascript ES6 structure and OOP. Both translate and dictionary API requests work together. If the language to be translated is English and a single word is written, the dictionary API works.
+It was a project that I loved. I developed using Javascript ES6 structure and OOP (API requests received with async and await). Both translate and dictionary API requests work together. If the language to be translated is English and a single word is written, the dictionary API works.
 
 Translated Words can be added to LocalStorage and then the history can be viewed
 
@@ -13,22 +13,25 @@ I developed the interface using Bootstrap V5.2
 * History Search , Delete , Delete All (Modal)
 * Bootstrap alert operation that gives a warning and disappears with the SetInterval() function
 
-[![Watch the video](images/main.png)](images/vıdeo.mp4)
+
+[![Watch the video](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/main.PNG)](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/video.mp4)
+
+
 
 
 ## Home Page (index.html)
-![alt text](?raw=true)
+![alt text](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/main.PNG?raw=true)
 
 ## Translate & Dictionary API
-![alt text](?raw=true)
+![alt text](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/dictionary.PNG?raw=true)
 
 ## Translate History
-![alt text](?raw=true)
+![alt text](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/history.png?raw=true)
 
 ## Bootstrap alert
 (It disappears after 2.5 seconds)
-![alt text](?raw=true)
-![alt text](?raw=true)
+![alt text](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/warning.png?raw=true)
+![alt text](https://github.com/FRTYZ/Translate-Dictionary-API-Project-With-Javascript-ES6/blob/main/images/warning1.png?raw=true)
 
 
 # Source Code
