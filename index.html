@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <title>Translate & Dictionary Project</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <section id="contact">
+          <div class="section-content">
+            <h1 class="section-header"> <span class="content-header wow fadeIn " data-wow-delay="0.2s"
+                data-wow-duration="2s">API</span> Project <sub style="font-size:15px">Translate & Dictionary</sub> </h1>
+          </div>
+          <div class="contact-section">
+            <div class="container">
+              <form id="translate-form">
+                <div class="col-md-6 form-line">
+                  <div class="form-group">
+                    <label for="from"> From</label>
+
+                    <select id="sourceLanguage">
+                      <option value="">Auto-Detect</option>
+                      <option value="en">English</option>
+                      <option value="tr">Turkish</option>
+                      <option value="de">German</option>
+                      <option value="es">Spanish</option>
+                      <option value="it">İtalian</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <textarea class="form-control" id="word" placeholder="Enter Your Text"></textarea>
+                  </div>
+                  <div>
+                    <button type="submit" class="btn btn-default submit"><i class="fa fa-globe" aria-hidden="true"></i>
+                      translate</button>
+                  </div>
+                  <br />
+
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="from"> To</label>
+
+                    <select id="language">
+                      <option value="en">English</option>
+                      <option value="tr">Turkish</option>
+                      <option value="de">German</option>
+                      <option value="es">Spanish</option>
+                      <option value="it">İtalian</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" id="translated" placeholder="Translated text will be here"
+                      disabled></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+          <h6 style="text-align:right;">Developed By <a style="text-decoration: none; color:#debe49;"
+              href="https://github.com/FRTYZ" target="_blank"> FRTYZ </a></h6>              
+        </section>
+                
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2" style="width: 10rem;">
+        <div class="card" style="--bs-card-bg: #b2aaaa; --bs-card-spacer-y: 1.5rem; --bs-card-spacer-x: 1rem;">
+          <div class="card-body">
+            <p class="card-text"><a href="index.html" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img
+                  style="width:70%; padding-left: 15px;" src="images/clock-history.svg"></a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" style="color:white" id="exampleModalLabel">History</h5>
+            <br />
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input class="form-control" style="color:white" type="text" name="filter" id="filter" placeholder="Search"
+              size="10">
+            <br />
+
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Word</th>
+                  <th scope="col">Translated</th>
+                  <th scope="col">Language</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--<tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr> -->
+              </tbody>
+            </table>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="clear-historys" class="btn btn-danger btn-sm">Clear All History</button>
+            <br />
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="detailrow">
+      <div class="col-md-12" id="dictionary">
+        <h2 style="text-align:center">Dictionary</h2>
+        <div class="word">
+          <!-- <h4>Word</h4>
+          <p>Phonetic : /ˈdiːteɪl/</p> -->
+        </div>
+        <br />
+        <div class="cardphonetic">
+          <h4>Pronunciation</h4>
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Country</th>
+                <th scope="col">Phonetic</th>
+                <th scope="col">Audio</th>
+                <th scope="col">Verb/Noun</th>
+              </tr>
+            </thead>
+            <tbody class="tbodyPhonetic">
+              <!-- <tr>
+                <th>
+                  <img src="images/uk-flag.jpg" id="outputImage" height="30px" width="30px">
+                </th>
+                <td>
+
+                </td>
+                <td>
+                  <span class="btnContainer">
+                    <input type="button" class='phoneticbutton'
+                      onclick="playAudio.call(this,'https://api.dictionaryapi.dev/media/pronunciations/en/detail-uk-noun.mp3')"
+                      id="btn_385">
+                  </span>
+                </td>
+                <td>
+                </td>                
+              </tr> -->
+            </tbody>
+          </table>
+          <!-- hidden HTML5 audio player -->
+          <audio id="audio" autoplay="autoplay">
+            <source src="null" type="audio/mp3" />
+          </audio>
+        </div>
+        <hr />
+        <div class="partOfSpeech1">
+          <div class="speech1Title">
+          </div>
+          <div class="speech1">
+          </div>
+          <div class="speech1synonyms">
+            <div class="synonymsTitle1"></div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="partOfSpeech2">
+          <div class="speech2Title">
+          </div>
+          <div class="speech2">
+            <!-- <ul>
+            <li><a><strong>definitions</strong></a></li>
+            <li><a>example </a></li>
+          </ul> -->
+          </div>
+          <div class="speech2synonyms">
+            <div class="synonymsTitle2"></div>
+            <!--  <span class="badge bg-secondary">badge New</span>  -->
+          </div>
+        </div>
+        <div class="partOfSpeech3">
+          <div class="speech3Title">
+          </div>
+          <div class="speech3">
+            <!-- <ul>
+            <li><a><strong>definitions</strong></a></li>
+            <li><a>example </a></li>
+          </ul> -->
+          </div>
+          <div class="speech3synonyms">
+            <div class="synonymsTitle3"></div>
+            <!--  <span class="badge bg-secondary">badge New</span>  -->
+          </div>
+        </div>
+
+        <div class="partOfSpeech4">
+          <div class="speech4Title">
+          </div>
+          <div class="speech4">
+            <!-- <ul>
+            <li><a><strong>definitions </strong></a></li>
+            <li><a>example</a></li>
+          </ul> -->
+          </div>
+          <div class="speech4synonyms">
+            <div class="synonymsTitle4"></div>
+            <!--  <span class="badge bg-secondary">badge New</span>  -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+    });
+  </script>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+   <!-- Required JS files included -->
+  <script src="UIForDictionary.js"></script>
+  <script src="UIForTranslate.js"></script>
+  <script src="storage.js"></script>
+  <script src="ApiRequest.js"></script>
+  <script src="app.js"></script>
+  <script src="project.js"></script>
+
+</body>
+
+</html>
